@@ -1,0 +1,27 @@
+{
+	"name": "kbolita",
+	"version": "0.1.0",
+	"private": true,
+	"scripts": {
+		"dev": "next dev",
+		"build": "next build",
+		"start": "next start",
+		"lint": "eslint"
+	},
+	"dependencies": {
+		"@supabase/supabase-js": "^2.89.0",
+		"cheerio": "^1.1.2",
+		"grammy": "^1.38.4",
+		"next": "16.1.0",
+		"puppeteer": "^24.34.0",
+		"react": "19.2.3",
+		"react-dom": "19.2.3"
+	},
+	"devDependencies": {
+		"@tailwindcss/postcss": "^4",
+		"@types/react": "19.2.7",
+		"eslint": "^9",
+		"eslint-config-next": "16.1.0",
+		"tailwindcss": "^4"
+	}
+}
