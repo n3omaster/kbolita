@@ -121,11 +121,6 @@ export async function POST(req) {
 
 		console.log(`[RETRIEVE] Almacenados: ${stored}, Omitidos: ${skipped}`)
 
-		// const webhookUrl = `https://n8n.qvapay.com/webhook-test/68cc4765-98c1-4c5c-a533-289424ab1763`
-		const webhookUrl = `https://n8n.qvapay.com/webhook/68cc4765-98c1-4c5c-a533-289424ab1763`
-
-		console.log("[RETRIEVE] Enviando webhook a:", webhookUrl)
-
 		const webhookBody = {
 			ok: true,
 			summary: {
@@ -137,7 +132,7 @@ export async function POST(req) {
 			},
 			results: allResults
 		}
-		const webhookResponse = await fetch(webhookUrl, {
+		const webhookResponse = await fetch(process.env.N8N_WEBHOOK_URL, {
 			method: "POST",
 			headers: {
 				"Content-Type": "application/json"
